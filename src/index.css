@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Mokgech";
+  src: url("./assets/fonts/Mokgech.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Capture It */
+@font-face {
+  font-family: "CaptureIt";
+  src: url("./assets/fonts/Capture.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-body: "Karma", serif;
+  --font-heading: "Mokgech", serif;
+  --font-accent: "CaptureIt", sans-serif;
+}
