@@ -12,7 +12,7 @@ function AngledTape() {
     const timer = setTimeout(() => {
       const rails = ref.current?.querySelectorAll<HTMLElement>(".rail");
       if (!rails?.length) return;
-      const BASE = 0.55,
+      const BASE = 0.75,
         BOOST = 1,
         DECAY = 1.5,
         DIR = 1;

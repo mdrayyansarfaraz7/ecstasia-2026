@@ -1,10 +1,10 @@
 function Timer() {
   return (
     <div
-      className="w-full bg-cover bg-center bg-no-repeat"
+      className="w-screen bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('/Slice 2.png')",
-        aspectRatio: "1238 / 836",
+        aspectRatio: "1238 / 813",
       }}
     ></div>
   );
