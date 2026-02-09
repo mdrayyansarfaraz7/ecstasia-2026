@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Timeline() {
   return (
@@ -8,9 +8,8 @@ function Timeline() {
         backgroundImage: "url('/Slice 6.png')",
         aspectRatio: "1238 / 836",
       }}
-    >
-    </div>
-  )
+    ></div>
+  );
 }
 
-export default Timeline
+export default Timeline;

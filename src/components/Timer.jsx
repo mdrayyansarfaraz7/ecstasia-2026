@@ -1,16 +1,13 @@
-
-
 function Timer() {
   return (
     <div
       className="w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/Slice 2.png')",
+      style={{
+        backgroundImage: "url('/Slice 2.png')",
         aspectRatio: "1238 / 836",
-       }}
-    >
-
-    </div>
-  )
+      }}
+    ></div>
+  );
 }
 
-export default Timer
+export default Timer;

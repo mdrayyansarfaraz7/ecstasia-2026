@@ -35,14 +35,13 @@ function Home() {
       <Symphony />
       <ExcitingEvents />
       <Timeline />
-      <GallerySection/>
+      <GallerySection />
       <DividerSingle />
-      <EcstasiaFamily/>
-      <DividerSingle />
-      <PreviousPartners/>
-      <Bottom/>
+      <EcstasiaFamily />
+      <PreviousPartners />
+      <Bottom />
     </>
-  )
+  );
 }
 
 export default function AppRoutes() {
@@ -54,16 +53,31 @@ export default function AppRoutes() {
         <Route path="/event/:id" element={<EventDetails />} />
         <Route path="/fest-timeline" element={<FestTimeline />} />
 
-        <Route path="/ecstasia-family/faculty-heads" element={<FacultyHeads/>} />
-        <Route path="/ecstasia-family/fest-advisors" element={<FestAdvisors/>} />
-        <Route path="/ecstasia-family/core-team" element={<CoreTeam/>} />
+        <Route
+          path="/ecstasia-family/faculty-heads"
+          element={<FacultyHeads />}
+        />
+        <Route
+          path="/ecstasia-family/fest-advisors"
+          element={<FestAdvisors />}
+        />
+        <Route path="/ecstasia-family/core-team" element={<CoreTeam />} />
 
-        <Route path="/ecstasia-family/web-dev-team" element={<WebDevTeam/>} />
-        <Route path="/ecstasia-family/content-team" element={<ContentTeam/>} />
-        <Route path="/ecstasia-family/graphics-team" element={<GraphicsTeam/>} />
-        <Route path="/ecstasia-family/marketing-team" element={<MarketingTeam/>} />
-        <Route path="/ecstasia-family/logistics-team" element={<LogesticsTeam/>} />
-        <Route path="/ecstasia-family/pr-team" element={<PRTeam/>} />
+        <Route path="/ecstasia-family/web-dev-team" element={<WebDevTeam />} />
+        <Route path="/ecstasia-family/content-team" element={<ContentTeam />} />
+        <Route
+          path="/ecstasia-family/graphics-team"
+          element={<GraphicsTeam />}
+        />
+        <Route
+          path="/ecstasia-family/marketing-team"
+          element={<MarketingTeam />}
+        />
+        <Route
+          path="/ecstasia-family/logistics-team"
+          element={<LogesticsTeam />}
+        />
+        <Route path="/ecstasia-family/pr-team" element={<PRTeam />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

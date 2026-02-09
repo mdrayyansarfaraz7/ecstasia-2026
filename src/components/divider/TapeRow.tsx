@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { TriangleAlert } from "lucide-react";
 
 interface TapeRowProps {
   text?: string;
@@ -43,7 +44,7 @@ export const TapeRow: React.FC<TapeRowProps> = ({
           style={{ backgroundColor: color, color: color }}
           className="px-6 uppercase flex flex-row items-center invisible absolute whitespace-nowrap arrow-left arrow-right"
         >
-          <img src="https://res.cloudinary.com/dengnhopb/image/upload/v1770630280/warn_wpik5v.png" alt="warn" width={20} className="text-black" />
+          <TriangleAlert className="-ml-5 text-black" />
           <span className="ml-7 text-black">{text}</span>
         </div>
 
@@ -54,7 +55,7 @@ export const TapeRow: React.FC<TapeRowProps> = ({
             style={{ backgroundColor: color, color: color }}
             className="px-6 uppercase flex flex-row items-center arrow-left arrow-right"
           >
-            <img src="/warn.png" alt="warn" width={20} className="text-black" />
+            <TriangleAlert className="-ml-5 text-black" />
             <span className="ml-7 text-black">{text}</span>
           </div>
         ))}
