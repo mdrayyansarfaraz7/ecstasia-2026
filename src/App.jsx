@@ -38,6 +38,7 @@ function Home() {
       <GallerySection />
       <DividerSingle />
       <EcstasiaFamily />
+      <DividerSingle />
       <PreviousPartners />
       <Bottom />
     </>
