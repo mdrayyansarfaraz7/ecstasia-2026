@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import Timer from "./components/Timer";
 import AboutUs from "./components/AboutUs";
@@ -24,6 +24,7 @@ import PRTeam from "./pages/PRTeam";
 import LogesticsTeam from "./pages/LogesticsTeam";
 import Divider from "./components/divider/Divider";
 import DividerSingle from "./components/divider/DividerSingle";
+import Nav from "./components/essential/Nav";
 
 function Home() {
   return (
@@ -38,49 +39,48 @@ function Home() {
       <GallerySection />
       <DividerSingle />
       <EcstasiaFamily />
+      <DividerSingle />
       <PreviousPartners />
       <Bottom />
     </>
   );
 }
 
-export default function AppRoutes() {
+function AppRoutes() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/event-category/:cat" element={<EventCategory />} />
-        <Route path="/event/:id" element={<EventDetails />} />
-        <Route path="/fest-timeline" element={<FestTimeline />} />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/event-category/:cat" element={<EventCategory />} />
+      <Route path="/event/:id" element={<EventDetails />} />
+      <Route path="/fest-timeline" element={<FestTimeline />} />
 
-        <Route
-          path="/ecstasia-family/faculty-heads"
-          element={<FacultyHeads />}
-        />
-        <Route
-          path="/ecstasia-family/fest-advisors"
-          element={<FestAdvisors />}
-        />
-        <Route path="/ecstasia-family/core-team" element={<CoreTeam />} />
+      <Route path="/ecstasia-family/faculty-heads" element={<FacultyHeads />} />
+      <Route path="/ecstasia-family/fest-advisors" element={<FestAdvisors />} />
+      <Route path="/ecstasia-family/core-team" element={<CoreTeam />} />
 
-        <Route path="/ecstasia-family/web-dev-team" element={<WebDevTeam />} />
-        <Route path="/ecstasia-family/content-team" element={<ContentTeam />} />
-        <Route
-          path="/ecstasia-family/graphics-team"
-          element={<GraphicsTeam />}
-        />
-        <Route
-          path="/ecstasia-family/marketing-team"
-          element={<MarketingTeam />}
-        />
-        <Route
-          path="/ecstasia-family/logistics-team"
-          element={<LogesticsTeam />}
-        />
-        <Route path="/ecstasia-family/pr-team" element={<PRTeam />} />
+      <Route path="/ecstasia-family/web-dev-team" element={<WebDevTeam />} />
+      <Route path="/ecstasia-family/content-team" element={<ContentTeam />} />
+      <Route path="/ecstasia-family/graphics-team" element={<GraphicsTeam />} />
+      <Route
+        path="/ecstasia-family/marketing-team"
+        element={<MarketingTeam />}
+      />
+      <Route
+        path="/ecstasia-family/logistics-team"
+        element={<LogesticsTeam />}
+      />
+      <Route path="/ecstasia-family/pr-team" element={<PRTeam />} />
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <Nav />
+      <AppRoutes />
+    </>
   );
 }
