@@ -43,7 +43,7 @@ export const TapeRow: React.FC<TapeRowProps> = ({
           style={{ backgroundColor: color, color: color }}
           className="px-6 uppercase flex flex-row items-center invisible absolute whitespace-nowrap arrow-left arrow-right"
         >
-          <img src="/warn.png" alt="warn" width={20} className="text-black" />
+          <img src="https://res.cloudinary.com/dengnhopb/image/upload/v1770630280/warn_wpik5v.png" alt="warn" width={20} className="text-black" />
           <span className="ml-7 text-black">{text}</span>
         </div>
 
