@@ -96,7 +96,7 @@ function NavLinks({ setOpen }) {
       <Link
         to={"/"}
         onClick={() => {
-          setOpen(false);
+          if (isMobile) setOpen(false);
         }}
         className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
       >
@@ -105,7 +105,7 @@ function NavLinks({ setOpen }) {
       <Link
         to={"/fest-timeline"}
         onClick={() => {
-          setOpen(false);
+          if (isMobile) setOpen(false);
         }}
         className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
       >
@@ -114,7 +114,7 @@ function NavLinks({ setOpen }) {
       <Link
         to={"/"}
         onClick={() => {
-          setOpen(false);
+          if (isMobile) setOpen(false);
         }}
         className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
       >
@@ -123,7 +123,7 @@ function NavLinks({ setOpen }) {
       <Link
         to={"/"}
         onClick={() => {
-          setOpen(false);
+          if (isMobile) setOpen(false);
         }}
         className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
       >
