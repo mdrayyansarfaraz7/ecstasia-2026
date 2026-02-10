@@ -52,7 +52,7 @@ const Nav = () => {
         />
       </div>
       <div className="flex flex-row items-center gap-3 sm:gap-4 md:gap-6">
-        {open && <NavLinks />}
+        {open && <NavLinks setOpen={setOpen} />}
         <img
           src="/icons/sound_icon.svg"
           alt="music"
@@ -70,7 +70,7 @@ const Nav = () => {
 
 export default Nav;
 
-function NavLinks() {
+function NavLinks({ setOpen }) {
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches,
   );
@@ -93,19 +93,40 @@ function NavLinks() {
     shadow-lg z-50 backdrop-blur-xl`
       }`}
     >
-      <Link to={"/"} className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]">
+      <Link
+        to={"/"}
+        onClick={() => {
+          setOpen(false);
+        }}
+        className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
+      >
         Home
       </Link>
       <Link
         to={"/fest-timeline"}
+        onClick={() => {
+          setOpen(false);
+        }}
         className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
       >
         Timeline
       </Link>
-      <Link to={"/"} className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]">
+      <Link
+        to={"/"}
+        onClick={() => {
+          setOpen(false);
+        }}
+        className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
+      >
         Exciting Event
       </Link>
-      <Link to={"/"} className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]">
+      <Link
+        to={"/"}
+        onClick={() => {
+          setOpen(false);
+        }}
+        className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
+      >
         Ecstasia Family
       </Link>
     </nav>
