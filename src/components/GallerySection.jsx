@@ -1,16 +1,14 @@
-import React from 'react'
+import React from "react";
 
 function GallerySection() {
   return (
-        <div
+    <div
       className="w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/Slice 7.png')",
-        aspectRatio: "1238 / 836",
-       }}
-    >
-
-    </div>
-  )
+      style={{
+        backgroundImage: "url('/Slice 7.png')",
+      }}
+    ></div>
+  );
 }
 
-export default GallerySection
+export default GallerySection;

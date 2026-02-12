@@ -9,8 +9,6 @@ function Timeline() {
 
   return (
     <div
-      // CHANGED: overflow-x-hidden (allows vertical scroll if screen is short)
-      // Added pb-10 to ensure bottom spacing when scrolling
       className="w-full bg-cover bg-center bg-no-repeat overflow-x-hidden min-h-screen lg:min-h-0 lg:[aspect-ratio:1238/836] relative pb-10 lg:pb-0"
       style={{
         backgroundImage: "url('/Slice%206.png')",
@@ -59,13 +57,11 @@ function Timeline() {
         </div>
 
         {/* 3. Dates Container */}
-        {/* Reduced gap from gap-6 to gap-4 for mobile compactness */}
         <div className="order-3 z-20 flex flex-col items-center gap-4 mt-2 w-full lg:block lg:absolute lg:top-[53%] lg:left-[8%] lg:gap-0 lg:mt-0 lg:mb-0 lg:w-auto">
           
           {/* --- Date 1: 14th March --- */}
           <div 
             onClick={() => handleNavigation('/event/1')}
-            // CHANGED: h-32 (mobile) -> h-40 (md) -> h-52 (lg)
             className="relative w-[90%] max-w-sm h-32 md:h-40 lg:h-52 lg:w-104 flex items-center justify-center lg:translate-x-72 group cursor-pointer transition-all duration-300"
           >
             <img 
@@ -76,14 +72,12 @@ function Timeline() {
             
             <div className="relative z-10 flex flex-col items-center justify-center h-full w-full pt-1">
               <span 
-                // CHANGED: text-3xl (mobile) -> text-4xl (md) -> text-[3.5rem] (lg)
                 className="text-3xl md:text-5xl lg:text-[3.5rem] leading-tight text-[#550a0a] font-mokgech transition-transform duration-300 ease-out group-hover:-translate-y-2 lg:group-hover:-translate-y-3"
               >
                 14th march
               </span>
               
               <span 
-                // CHANGED: text-xs (mobile) -> text-lg (lg)
                 className="absolute bottom-5 md:bottom-6 lg:bottom-10 text-xs md:text-base lg:text-xl text-[#532301] font-bold tracking-wide opacity-0 translate-y-2 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0"
                 style={{ fontFamily: 'Mokgech' }}
               >
@@ -95,7 +89,6 @@ function Timeline() {
           {/* --- Date 2: 15th March --- */}
           <div 
             onClick={() => handleNavigation('/event/2')}
-            // CHANGED: h-32 (mobile) -> h-40 (md) -> h-52 (lg)
             className="relative w-[90%] max-w-sm h-32 md:h-40 lg:h-52 lg:w-104 flex items-center justify-center group cursor-pointer transition-all duration-300"
           >
             <img 
@@ -106,14 +99,12 @@ function Timeline() {
             
             <div className="relative z-10 flex flex-col items-center justify-center h-full w-full pt-1">
               <span 
-                 // CHANGED: text-3xl (mobile) -> text-4xl (md) -> text-[3.5rem] (lg)
                 className="text-3xl md:text-5xl lg:text-[3.5rem] leading-tight text-[#550a0a] font-mokgech transition-transform duration-300 ease-out group-hover:-translate-y-2 lg:group-hover:-translate-y-3"
               >
                 15th march
               </span>
               
               <span 
-                 // CHANGED: text-xs (mobile) -> text-lg (lg)
                 className="absolute bottom-5 md:bottom-6 lg:bottom-10 text-xs md:text-base lg:text-xl text-[#532301] font-bold tracking-wide opacity-0 translate-y-2 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0"
                 style={{ fontFamily: 'Mokgech' }}
               >
