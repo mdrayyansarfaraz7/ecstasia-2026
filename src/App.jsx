@@ -29,6 +29,7 @@ import Nav from "./components/essential/Nav";
 function Home() {
   return (
     <>
+      <Nav />
       <Hero />
       <Divider />
       <Timer />
@@ -79,7 +80,6 @@ function AppRoutes() {
 export default function App() {
   return (
     <>
-      <Nav />
       <AppRoutes />
     </>
   );

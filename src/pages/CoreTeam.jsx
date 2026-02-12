@@ -6,7 +6,9 @@ function CoreTeam() {
     {
       id: 1,
       name: "Swarnabha Mitra",
-      year: "4th",
+      year: "4th Year",
+      isStudent:true,
+      fsId:"CO2026-1001",
       course: "B.Tech CSE(AI & ML)",
       imageUrl:
         "https://res.cloudinary.com/ddo15zw7d/image/upload/v1770571309/1740456787975_ub000o.jpg",
@@ -14,11 +16,14 @@ function CoreTeam() {
       linkedinURL:
         "https://www.linkedin.com/in/swarnabha-mitra-9168a4269/",
     },
+  
     {
       id: 10000000,
       name: "Harsh Jaiswal",
-      year: "4th",
+      year: "4th Year",
       course: "B.Tech CST",
+      isStudent:true,
+      fsId:"CO2026-1002",
       imageUrl:
         "https://res.cloudinary.com/ddo15zw7d/image/upload/v1770571434/1761401662609_y8btjh.png",
       position: "Convenor",
@@ -34,6 +39,8 @@ function CoreTeam() {
     { teamName: "Marketing", url: "/ecstasia-family/marketing-team" },
     { teamName: "Logistics", url: "/ecstasia-family/logistics-team" },
     { teamName: "PR & Social Media", url: "/ecstasia-family/pr-team" },
+    { teamName: "Decoration", url: "/ecstasia-family/logistics-team" },
+    { teamName: "Finance", url: "/ecstasia-family/pr-team" },
   ];
 
   return (
@@ -63,33 +70,74 @@ function CoreTeam() {
         </div>
 
         {/* ===== TEAM NAVIGATION TILES BELOW ===== */}
-        <h2 className="text-3xl md:text-4xl font-heading mb-8">
+        <h2 className="text-4xl md:text-6xl font-heading mb-8">
           Explore Teams
         </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 justify-items-center">
           {Teams.map((team, idx) => (
             <Link key={idx} to={team.url} className="group">
-              <div className="relative w-48 md:w-56 aspect-3/4 transition-transform duration-300 group-hover:scale-105">
+              <div className="
+        relative
+        w-44 md:w-52 lg:w-64
+        aspect-3/4
+        transition-transform duration-300
+        group-hover:scale-105
+      ">
 
-                {/* parchment image */}
+                {/* Folder Background */}
                 <img
-                  src="/Page.png"
+                  src="/file.png"
                   alt={team.teamName}
-                  className="w-full h-full object-contain drop-shadow-xl"
+                  className="w-full h-full object-contain drop-shadow-xl select-none pointer-events-none"
                 />
 
-                {/* overlay text */}
-                <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-                  <span className="text-xl md:text-2xl font-bold tracking-wide text-red-950 font-accent">
-                    {team.teamName} Team
-                  </span>
+                {/* Diagonal Overlay Text Layer */}
+                <div className="absolute inset-0 flex items-center justify-center">
+
+                  <div className="-rotate-12 text-center">
+
+                    {/* Team Name — Always Visible */}
+                    <div
+                      className="
+                font-accent
+                text-red-950
+                text-xl md:text-2xl
+                tracking-wide
+                transition-all duration-500
+                group-hover:-translate-y-2
+              "
+                    >
+                      {team.teamName} Team
+                    </div>
+
+                    {/* View Team — Only On Hover */}
+                    <div
+                      className="
+                font-accent
+                text-sm
+                text-red-900/80
+                mt-2
+                opacity-0
+                scale-90
+                transition-all duration-500
+                group-hover:opacity-100
+                group-hover:scale-100
+              "
+                    >
+                      View Team
+                    </div>
+
+                  </div>
+
                 </div>
 
               </div>
             </Link>
           ))}
         </div>
+
+
 
 
       </div>
