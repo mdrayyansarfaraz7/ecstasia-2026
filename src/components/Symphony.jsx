@@ -3,27 +3,14 @@ import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 
-// https://res.cloudinary.com/dooekcvv0/image/upload/v1770990481/bnhmo2qbmrt5si3d4dqi.png photo holder 4x
-// https://res.cloudinary.com/dooekcvv0/image/upload/v1770990525/yxvv8ozfhik0crgfaxsw.png photo holder 3x
-// https://res.cloudinary.com/dooekcvv0/image/upload/v1770990551/qdksamoucqvmpy04aart.png sherlock rightside 3x
-// https://res.cloudinary.com/dooekcvv0/image/upload/v1770990608/mijzmvlbhkzwlfrkudyc.png sherlock leftside 3x
-
-//Images
-// https://ibb.co/whQt1bfv
-// https://ibb.co/kgmT5yCz
-// https://ibb.co/dw6VSLQb
-// https://ibb.co/zMNQJrH
-// https://ibb.co/MybKNsDX
-// https://ibb.co/tFwFtvD
-
 
 const images = [
-  "https://ibb.co/whQt1bfv",
-  "https://ibb.co/kgmT5yCz",
-  "https://ibb.co/dw6VSLQb",
-  "https://ibb.co/zMNQJrH",
-  "https://ibb.co/MybKNsDX",
-  "https://ibb.co/tFwFtvD",
+  "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771004908/_MG_2586.JPG_at77iu.jpg",
+  "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771004982/_MG_0566.JPG_tbz4uz.jpg",
+  "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771005027/20250311_010942.jpg_zez3so.jpg",
+  "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771005073/_MG_1162.JPG_j39kmf.jpg",
+  "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771005079/_MG_0001.JPG_l9vgrp.jpg",
+  "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771005124/_MG_4179.JPG_op95vu.jpg",
 ];
 
 
@@ -34,90 +21,93 @@ function Symphony() {
   return (
     <div
       className="relative w-full bg-cover bg-center bg-no-repeat text-white overflow-hidden"
-      style={{
-        backgroundImage: "url('/Slice 4.png')",
-        aspectRatio: "1238 / 836",
-      }}
+      style={{ backgroundImage: "url('/Slice 4.png')" }}
     >
 
-      {/* ===== MARQUEE ===== */}
-      <div className="w-full overflow-hidden pt-10">
+      {/* marquee*/}
+      <div className="w-full overflow-hidden pt-4 md:pt-10">
         <motion.div
-          className="flex gap-12 w-max"
+          className="flex gap-4 md:gap-12 w-max"
           animate={{ x: ["0%", "-50%"] }}
           transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
         >
           {[...images, ...images].map((img, i) => (
-            <div key={i} className="relative w-[220px] h-[300px]">
-              <img
-                src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770990481/bnhmo2qbmrt5si3d4dqi.png"
-                alt="frame"
-                className="absolute inset-0 w-full h-full object-contain z-10"
-              />
+            <div key={i} className="relative w-[110px] h-[160px] md:w-[200px] md:h-[290px]">
               <img
                 src={img}
-                alt=""
-                className="absolute top-[12%] left-[12%] w-[76%] h-[76%] object-cover"
+                className="absolute top-[15%] left-[13%] w-[76%] h-[76%] object-cover z-10"
+              />
+              <img
+                src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770990481/bnhmo2qbmrt5si3d4dqi.png"
+                className="absolute inset-0 w-full h-full object-contain"
               />
             </div>
           ))}
         </motion.div>
       </div>
 
-      {/*TITLE*/}
-      <div className="relative z-10 w-full flex justify-center mt-16">
-        <h1 className="font-heading text-white text-[7vw] leading-none whitespace-nowrap text-center relative">
-
+      {/* symphony */}
+      <div className="relative z-10 w-full flex justify-center mt-6 md:mt-16 px-3">
+        <h1 className="font-heading text-white text-[9vw] md:text-[6.5vw] leading-none whitespace-nowrap text-center relative">
           Symp
           <span className="relative inline-block">
             h
-            <span className="absolute left-[45%] ">
-              o
-            </span>
+            <span className="absolute left-[45%]">o</span>
           </span>
           ny of Experience
-
         </h1>
       </div>
 
-      {/*STATS GRID*/}
-      <motion.div
-        className="relative z-10 grid grid-cols-3 gap-12 text-center mt-16 px-20 font-capture"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+      <div className="relative w-full md:flex md:items-end md:justify-between">
 
-        <Stat number="7+" label="Years" />
-        <Stat number="35+" label="Events" />
-        <Stat number="50+" label="Partners" />
+        {/* Sherlock image laptp */}
+        <img
+          src="https://res.cloudinary.com/dxdzicbnt/image/upload/v1771007229/Sherlock-Transparent-Image_1_2_xbgupl.png"
+          className="hidden md:block md:w-[420px] md:ml-6 md:mt-10"
+        />
 
-        {/* center bottom row */}
-        <div className="col-span-3 flex justify-center gap-54">
-          <Stat number="7000+" label="Participants" />
-          <Stat number="10000+" label="Footfall" />
-        </div>
+        <motion.div
+          className="
+    relative z-10
+    w-full
+    px-6 md:px-10
+    mt-8 md:mt-0
+    mb-20 md:mb-20
+    font-accent
+  "
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
 
-      </motion.div>
+          <div className="grid grid-cols-3 text-center gap-y-6 md:gap-14">
+            <Stat number="7+" label="Years" />
+            <Stat number="35+" label="Events" />
+            <Stat number="50+" label="Partners" />
+          </div>
 
-      {/*SHERLOCK LEFT*/}
+          <div className="flex justify-center gap-10 md:gap-40 mt-6 md:mt-10">
+            <Stat number="7000+" label="Participants" />
+            <Stat number="10000+" label="Footfall" />
+          </div>
+
+        </motion.div>
+      </div>
+
+      {/* sherlock mobile */}
       <img
         src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770990608/mijzmvlbhkzwlfrkudyc.png"
-        className="absolute bottom-0 left-0 w-[220px] z-0"
-        alt=""
+        className="md:hidden absolute bottom-0 left-0 w-[80px] opacity-70"
       />
 
-      {/*SHERLOCK RIGHT*/}
       <img
         src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770990551/qdksamoucqvmpy04aart.png"
-        className="absolute bottom-0 right-0 w-[220px] z-0"
-        alt=""
+        className="md:hidden absolute bottom-0 right-0 w-[80px] opacity-70"
       />
-    </div >
+    </div>
   );
 }
-
 function Stat({ number, label }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -129,7 +119,7 @@ function Stat({ number, label }) {
     if (!inView) return;
 
     let start = 1;
-    const duration = 1000; // animation speed
+    const duration = 1000;
     const stepTime = Math.max(10, duration / target);
 
     const counter = setInterval(() => {
@@ -148,10 +138,12 @@ function Stat({ number, label }) {
 
   return (
     <div ref={ref}>
-      <h2 className="text-6xl font-bold">
+      <h2 className="text-4xl md:text-9xl lg:text-8xl font-mokgech">
         {count}+
       </h2>
-      <p className="text-3xl mt-2 font-mokgech">{label}</p>
+      <p className="text-lg md:text-3xl lg:text-4xl mt-1 md:mt-2 font-body font-bold">
+        {label}
+      </p>
     </div>
   );
 }
