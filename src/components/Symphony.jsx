@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Symphony() {
   return (
@@ -8,9 +8,8 @@ function Symphony() {
         backgroundImage: "url('/Slice 4.png')",
         aspectRatio: "1238 / 836",
       }}
-    >
-    </div>
-  )
+    ></div>
+  );
 }
 
-export default Symphony
+export default Symphony;

@@ -22,3 +22,15 @@
   --font-heading: "Mokgech", serif;
   --font-accent: "CaptureIt", sans-serif;
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
