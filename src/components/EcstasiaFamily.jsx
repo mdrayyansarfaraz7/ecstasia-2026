@@ -75,13 +75,13 @@ function EcstasiaFamily() {
     
     if (index === 1) {
       // Center (Focus)
-      return `${baseStyle} z-40 md:absolute md:left-1/2 md:-translate-x-1/2 md:translate-y-4 scale-105 md:scale-115 opacity-100 drop-shadow-2xl brightness-110 hover:scale-[1.08] md:hover:scale-[1.2] hover:brightness-125`;
+      return `${baseStyle} z-40 md:absolute md:left-1/2 md:-translate-x-1/2 md:-translate-y-4 scale-105 md:scale-115 opacity-100 drop-shadow-2xl brightness-110 hover:scale-[1.08] md:hover:scale-[1.2] hover:brightness-125`;
     } else if (index === 0) {
       // Left
-      return `${baseStyle} z-20 md:absolute md:left-1/2 md:-translate-x-[160%] md:-translate-y-52 scale-95 md:scale-90 opacity-100 drop-shadow-xl brightness-95 hover:scale-[0.98] md:hover:scale-[0.95] hover:brightness-115`;
+      return `${baseStyle} z-20 md:absolute md:left-1/2 md:-translate-x-[160%] md:-translate-y-60 scale-95 md:scale-90 opacity-100 drop-shadow-xl brightness-95 hover:scale-[0.98] md:hover:scale-[0.95] hover:brightness-115`;
     } else {
       // Right
-      return `${baseStyle} z-20 md:absolute md:left-1/2 md:translate-x-[60%] md:-translate-y-52 scale-95 md:scale-90 opacity-100 drop-shadow-xl brightness-95 hover:scale-[0.98] md:hover:scale-[0.95] hover:brightness-115`;
+      return `${baseStyle} z-20 md:absolute md:left-1/2 md:translate-x-[60%] md:-translate-y-60 scale-95 md:scale-90 opacity-100 drop-shadow-xl brightness-95 hover:scale-[0.98] md:hover:scale-[0.95] hover:brightness-115`;
     }
   };
 
@@ -92,14 +92,14 @@ function EcstasiaFamily() {
     >
       {/* Main Title */}
       <h1 
-        className="relative z-40 text-6xl md:text-9xl font-heading text-white mb-16 drop-shadow-[0_10px_10px_rgba(0,0,0,0.9)]"
+        className="relative z-40 text-6xl md:text-9xl font-heading text-white mb-8 md:mb-16 drop-shadow-[0_10px_10px_rgba(0,0,0,0.9)]"
         style={{ fontFamily: '"Mokgech", serif' }}
       >
         Ecstasia Family
       </h1>
 
       <div 
-        className="relative w-full max-w-7xl h-auto py-10 md:py-0 md:h-[700px] flex flex-col md:block items-center justify-center gap-8 md:gap-0 px-4 perspective-[1000px]"
+        className="relative w-full max-w-7xl h-auto md:h-[700px] flex flex-col md:block items-center justify-center gap-8 md:gap-0 px-4 perspective-[1000px]"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
