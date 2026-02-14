@@ -1,10 +1,10 @@
 function AboutUs() {
   return (
     <div
-      className="w-screen bg-cover bg-center bg-no-repeat"
+      className="w-full bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('/Slice 3.png')",
-        aspectRatio: "1283 / 813",
+        aspectRatio: "1238 / 836",
       }}
     ></div>
   );

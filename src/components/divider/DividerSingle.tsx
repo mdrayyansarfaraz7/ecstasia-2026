@@ -2,7 +2,9 @@ import PrimaryTape from "./PrimaryTape";
 
 const DividerSingle = () => {
   return (
-    <div className="absolute w-screen overflow-hidden py-6 h-50 bg-transparent -mt-25">
+    <div
+      className={`absolute w-full overflow-hidden bg-transparent -mt-23`}
+    >
       <PrimaryTape />
     </div>
   );

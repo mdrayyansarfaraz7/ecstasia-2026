@@ -84,7 +84,7 @@ function EcstasiaFamily() {
   return (
     <div
       className="w-full h-screen bg-cover bg-center bg-no-repeat relative flex flex-col items-center justify-center overflow-hidden"
-      style={{ backgroundImage: "url('/family_bg.jpg')" }}
+      style={{ backgroundImage: "url('/Slice 9.png')" }}
     >
       {/* Main Title */}
       <h1 

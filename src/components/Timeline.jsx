@@ -3,10 +3,9 @@ import React from "react";
 function Timeline() {
   return (
     <div
-      className="w-screen bg-cover bg-center bg-no-repeat"
+      className="w-full bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/Slice 6.png')",
-        aspectRatio: "1238 / 813",
+        backgroundImage: "url('/Slice 6.png')"
       }}
     ></div>
   );
