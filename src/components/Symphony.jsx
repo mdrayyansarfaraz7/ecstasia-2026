@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Marquee from "react-fast-marquee";
 
 
 
@@ -13,41 +14,31 @@ const images = [
   "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771005124/_MG_4179.JPG_op95vu.jpg",
 ];
 
-
-
-
-
 function Symphony() {
   return (
     <div
       className="relative w-full bg-cover bg-center bg-no-repeat text-white overflow-hidden"
       style={{ backgroundImage: "url('/Slice 4.png')" }}
     >
-
-      {/* marquee*/}
-      <div className="w-full overflow-hidden pt-4 md:pt-10">
-        <motion.div
-          className="flex gap-4 md:gap-12 w-max"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-        >
+      <div className="w-full overflow-hidden">
+        <Marquee speed={60} pauseOnHover gradient={false}>
           {[...images, ...images].map((img, i) => (
             <div key={i} className="relative w-[110px] h-[160px] md:w-[200px] md:h-[290px]">
               <img
                 src={img}
-                className="absolute top-[15%] left-[13%] w-[76%] h-[76%] object-cover z-10"
+                className="absolute top-[10%] left-[20%] w-[60%] h-[70%] object-cover z-10"
               />
               <img
-                src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770990481/bnhmo2qbmrt5si3d4dqi.png"
-                className="absolute inset-0 w-full h-full object-contain"
+                src="/rec.png"
+                className="absolute inset-0 w-full h-[90%] object-contain"
               />
             </div>
           ))}
-        </motion.div>
+        </Marquee>
       </div>
 
       {/* symphony */}
-      <div className="relative z-10 w-full flex justify-center mt-6 md:mt-16 px-3">
+      <div className="relative z-10 w-full  flex justify-center mt-6 md:mt-16 px-3">
         <h1 className="font-heading text-white text-[9vw] md:text-[6.5vw] leading-none whitespace-nowrap text-center relative">
           Symp
           <span className="relative inline-block">
@@ -59,8 +50,6 @@ function Symphony() {
       </div>
 
       <div className="relative w-full md:flex md:items-end md:justify-between">
-
-        {/* Sherlock image laptp */}
         <img
           src="https://res.cloudinary.com/dxdzicbnt/image/upload/v1771007229/Sherlock-Transparent-Image_1_2_xbgupl.png"
           className="hidden md:block md:w-[420px] md:ml-6 md:mt-10"
@@ -138,7 +127,7 @@ function Stat({ number, label }) {
 
   return (
     <div ref={ref}>
-      <h2 className="text-4xl md:text-9xl lg:text-8xl font-mokgech">
+      <h2 className="text-4xl md:text-9xl lg:text-8xl font-accent">
         {count}+
       </h2>
       <p className="text-lg md:text-3xl lg:text-4xl mt-1 md:mt-2 font-body font-bold">

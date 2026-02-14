@@ -30,11 +30,10 @@ function GallerySection() {
 
       
       <h1
-        className="relative z-10 text-[#532301] font-bold text-center 
+        className="relative z-10 text-[#532301] text-center 
                    pt-10 md:pt-[8%] 
                    mb-4 md:mb-8 
-                   text-[2rem] md:text-[6rem] lg:text-[10rem] leading-none"
-        style={{ fontFamily: "'Mokgech', cursive" }}
+                   text-[2rem] md:text-[6rem] lg:text-[10rem] leading-none font-heading"
       >
         Gallery
       </h1>

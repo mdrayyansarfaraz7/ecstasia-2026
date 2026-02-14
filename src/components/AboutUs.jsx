@@ -1,98 +1,69 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
 function AboutUs() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+  const [show, setShow] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
+    const ob = new IntersectionObserver(
+      ([e]) => setShow(e.isIntersecting),
+      { threshold: 0.2 }
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
+    if (ref.current) ob.observe(ref.current);
+    return () => ob.disconnect();
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className="w-full relative flex items-start justify-center bg-cover bg-center bg-no-repeat overflow-hidden pt-16 md:pt-32"
+    <section
+      ref={ref}
+      className="w-full min-h-screen bg-cover bg-center flex items-center justify-center px-6 py-12"
       style={{
         backgroundImage: "url('/Slice 3.png')",
-        aspectRatio: "1238 / 836",
         backgroundColor: "#FDECE2",
       }}
     >
-      {/* Scroll Animation Styles */}
-      <style>{`
-        .slide-left {
-          opacity: 0;
-          transform: translateX(-100px);
-          transition: all 1s ease-out;
-        }
-        .slide-right {
-          opacity: 0;
-          transform: translateX(100px);
-          transition: all 1s ease-out;
-        }
-        .active-slide {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      `}</style>
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
-      <div className="flex flex-col md:flex-row items-start w-full max-w-7xl px-8 md:px-12 gap-8 md:gap-12">
-        
-        {/* Left Section: Image slides from Left */}
-        <div className={`w-full md:w-[40%] flex justify-center slide-left ${isVisible ? 'active-slide' : ''}`}>
-          <img 
-            src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770655208/xu3ylvphr2jfabqhkswk.png" 
-            alt="Detective Silhouette" 
-            className="h-auto max-h-[75vh] object-contain"
-          />
-        </div>
-
-        {/* Right Section: Writing slides from Right */}
-        <div className={`w-full md:w-[60%] flex flex-col pt-4 md:pt-16 slide-right ${isVisible ? 'active-slide' : ''}`}>
-          <h1 
-            style={{ 
-              fontFamily: "var(--font-heading, 'Mokgech', serif)", 
-              fontSize: "clamp(2.5rem, 8vw, 5.5rem)",
-              color: "#5D3317",
-              marginBottom: "1.5rem",
-              lineHeight: "1.1"
-            }}
+        <div
+          className={`transition-all duration-700 order-1 lg:order-2 text-center lg:text-left ${
+            show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <h1
+            style={{ fontFamily: "var(--font-heading)" }}
+            className="text-7xl sm:text-7xl lg:text-8xl mb-4 text-[#5D3317]"
           >
             About us
           </h1>
 
-          <p 
-            className="text-base md:text-xl lg:text-2xl font-medium leading-relaxed"
-            style={{ 
-              fontFamily: "var(--font-body, 'Karma', serif)", 
-              color: "#8B4513",
-              textAlign: "left",
-              maxWidth: "900px", // Allows writing to stay in fewer, wider lines
-              width: "100%"
-            }}
+          <p
+            style={{ fontFamily: "var(--font-body)" }}
+            className="text-base sm:text-lg lg:text-xl leading-relaxed text-[#8B4513] mx-auto lg:mx-0 "
           >
-            Enter a realm where creativity knows no bounds! Ecstasia, the 
-            long-awaited cultural extravaganza, is poised to enchant at 
-            the heart of the University of Engineering and Management, 
-            Kolkata. This annual celebration isn't just an event; it's a 
-            tradition that sets our campus ablaze with excitement. Ecstasia 
-            stands as the grandest and most anticipated fest, igniting the 
-            spirit of camaraderie and unleashing a wave of exhilaration.
+            Enter a realm where creativity knows no bounds! Ecstasia, the
+            long-awaited cultural extravaganza, is poised to enchant at the
+            heart of the University of Engineering and Management, Kolkata.
+            This annual celebration isn't just an event; it's a tradition that
+            sets our campus ablaze with excitement. Ecstasia stands as the
+            grandest and most anticipated fest, igniting the spirit of
+            camaraderie and unleashing a wave of exhilaration.
           </p>
         </div>
+
+        <div
+          className={`flex justify-center transition-all duration-700 order-2 lg:order-1 ${
+            show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <img
+            src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770655208/xu3ylvphr2jfabqhkswk.png"
+            alt="Detective"
+            className="h-[220px] sm:h-[280px] md:h-[440px] lg:h-[600px] w-auto object-contain"
+          />
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 }
 

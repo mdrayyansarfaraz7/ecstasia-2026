@@ -1,21 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Timer() {
-  const containerRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  // ✅ Automatically set countdown to next March 14
   const getNextMarch14 = () => {
     const now = new Date();
     let year = now.getFullYear();
-
-    let target = new Date(year, 2, 14, 0, 0, 0); // March = month index 2
-
-    // If March 14 already passed this year → use next year
-    if (now > target) {
-      target = new Date(year + 1, 2, 14, 0, 0, 0);
-    }
-
+    let target = new Date(year, 2, 14, 0, 0, 0);
+    if (now > target) target = new Date(year + 1, 2, 14, 0, 0, 0);
     return target.getTime();
   };
 
@@ -28,23 +18,15 @@ function Timer() {
     seconds: 0,
   });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const progress =
-        (windowHeight - rect.top) / (windowHeight + rect.height);
-      setScrollProgress(Math.max(0, Math.min(1, progress)));
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [show, setShow] = useState(false);
+  const [textShow, setTextShow] = useState(false);
 
   useEffect(() => {
+    setShow(true);
+    setTimeout(() => setTextShow(true), 400);
+
     const interval = setInterval(() => {
-      const now = new Date().getTime();
+      const now = Date.now();
       const distance = targetDate - now;
 
       if (distance > 0) {
@@ -60,97 +42,103 @@ function Timer() {
     return () => clearInterval(interval);
   }, [targetDate]);
 
-  const timerAppearance = Math.max(0, Math.min(1, (scrollProgress - 0.25) / 0.2));
-  const splitFactor = Math.max(0, Math.min(1, (scrollProgress - 0.45) / 0.18));
-  const xMove = splitFactor * 340;
-  const textOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.65) / 0.08));
-
-  const HFix = ({ children, isTagline = false }) => (
-    <span className="inline-flex items-baseline">
-      <span className="relative">h</span>
-      <span
-        style={{
-          marginLeft: isTagline ? '-0.75em' : '-0.6em',
-          position: 'relative',
-          zIndex: 1,
-        }}
+  const Box = ({ value, label }) => (
+    <div className="text-center">
+      <h2
+        style={{ fontFamily: "var(--font-accent)" }}
+        className="text-3xl sm:text-4xl lg:text-6xl"
       >
-        {children}
-      </span>
-    </span>
+        {value.toString().padStart(2, "0")}
+      </h2>
+      <p
+        style={{ fontFamily: "var(--font-heading)" }}
+        className="text-lg sm:text-xl lg:text-3xl"
+      >
+        {label}
+      </p>
+    </div>
   );
 
   return (
     <div
-      ref={containerRef}
-      className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-center relative"
+      className="w-full h-screen bg-cover bg-center flex flex-col justify-center gap-8 px-4"
       style={{
         backgroundImage: "url('/Slice 2.png')",
-        backgroundColor: '#FDECE2',
-        minHeight: '160vh',
+        backgroundColor: "#FDECE2",
       }}
     >
-      <div className="sticky top-1/4 flex flex-col items-center justify-center w-full ">
-        <div className="relative flex items-center justify-center w-full min-h-[500px]">
-          
-          <div
-            className="z-20 absolute transition-transform duration-150 linear"
-            style={{ transform: `translateX(${-xMove}px)` }}
-          >
-            <img
-              src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770660295/lbei505cdeepiauuntar.png"
-              alt="Hourglass"
-              className="w-60 md:w-[500px] h-auto drop-shadow-2xl"
-            />
-          </div>
+      <div
+        className={`transition-all duration-700 w-full max-w-6xl mx-auto ${
+          show ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0"
+        }`}
+      >
 
-          <div
-            className="z-10 absolute flex gap-6 md:gap-14 transition-all duration-150 linear text-black"
-            style={{
-              transform: `translateX(${xMove}px)`,
-              opacity: timerAppearance,
-            }}
-          >
-            {[
-              { val: timeLeft.days, lab: 'days' },
-              { val: timeLeft.hours, lab: 'hours' },
-              { val: timeLeft.minutes, lab: 'minutes' },
-              { val: timeLeft.seconds, lab: 'second' },
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <h2
-                  style={{ fontFamily: 'var(--font-accent)' }}
-                  className="text-4xl md:text-7xl leading-none"
-                >
-                  {item.val.toString().padStart(2, '0')}
-                </h2>
-                <p
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                  className="text-xl md:text-4xl mt-2"
-                >
-                  {item.lab === 'hours' ? <HFix>ours</HFix> : item.lab}
-                </p>
+        <div className="flex flex-col items-center gap-8 md:hidden">
+          <img
+            src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770660295/lbei505cdeepiauuntar.png"
+            alt="Hourglass"
+            className="w-36 h-full"
+          />
+
+          <div className="flex gap-6">
+            <Box value={timeLeft.days} label="days" />
+            <Box value={timeLeft.hours} label="hours" />
+            <Box value={timeLeft.minutes} label="minutes" />
+            <Box value={timeLeft.seconds} label="seconds" />
+          </div>
+        </div>
+
+        <div className="hidden md:block">
+          <div className="lg:flex lg:items-center lg:justify-center lg:gap-16">
+
+            <div className="grid grid-cols-3 items-center gap-4 lg:hidden">
+              <div className="flex flex-col gap-6 items-center">
+                <Box value={timeLeft.days} label="days" />
+                <Box value={timeLeft.hours} label="hours" />
               </div>
-            ))}
+
+              <div className="flex justify-center">
+                <img
+                  src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770660295/lbei505cdeepiauuntar.png"
+                  alt="Hourglass"
+                  className="w-80 h-200"
+                />
+              </div>
+
+              <div className="flex flex-col gap-6 items-center">
+                <Box value={timeLeft.minutes} label="minutes" />
+                <Box value={timeLeft.seconds} label="seconds" />
+              </div>
+            </div>
+
+            <div className="hidden lg:flex items-center gap-16">
+              <img
+                src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770660295/lbei505cdeepiauuntar.png"
+                alt="Hourglass"
+                className="w-80 h-auto"
+              />
+
+              <div className="flex gap-12">
+                <Box value={timeLeft.days} label="days" />
+                <Box value={timeLeft.hours} label="hours" />
+                <Box value={timeLeft.minutes} label="minutes" />
+                <Box value={timeLeft.seconds} label="seconds" />
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div
-          className="mt-16 w-full px-4 text-center text-black"
-          style={{
-            opacity: textOpacity,
-            transform: `translateY(${(1 - textOpacity) * 30}px)`,
-            transition: 'all 0.5s ease-out',
-          }}
-        >
-          <p
-            style={{ fontFamily: 'var(--font-heading)' }}
-            className="text-2xl md:text-6xl whitespace-nowrap"
-          >
-            An Uncovered truth awaits your investigation.
-          </p>
-        </div>
       </div>
+
+      <p
+        style={{ fontFamily: "var(--font-heading)" }}
+        className={`text-2xl sm:text-4xl lg:text-5xl text-black text-center transition-all duration-700 ${
+          textShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
+      >
+        An Uncovered truth awaits your investigation.
+      </p>
     </div>
   );
 }

@@ -63,7 +63,7 @@ function ExcitingEvents() {
     >
       <div className="max-w-xl text-white text-center lg:text-left mb-4 lg:mb-0">
         <h2
-          className="text-4xl sm:text-5xl lg:text-7xl mb-6"
+          className="text-7xl sm:text-7xl lg:text-7xl mb-6"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           Exciting Events

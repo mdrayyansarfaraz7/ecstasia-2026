@@ -33,10 +33,11 @@ function Home() {
       <Nav />
       <Hero />
       <Divider />
+      <Timer/>
       <AboutUs />
       <Symphony />
       <ExcitingEvents />
-      <Divider />
+      <DividerSingle />
       <Timeline />
       <GallerySection />
       <DividerSingle />

@@ -35,7 +35,7 @@ function Timeline() {
         <div className="order-1 mt-8 lg:mt-0 text-center w-full lg:absolute lg:top-[8%] lg:right-[7%] z-30 lg:text-right lg:w-auto">
           <h1 
             // Scaled text: text-5xl (mobile) -> text-7xl (tablet) -> text-9xl (desktop)
-            className="text-5xl md:text-7xl lg:text-[9rem] leading-none text-[#532301] font-mokgech drop-shadow-sm" 
+            className="text-5xl md:text-7xl lg:text-[9rem] leading-none text-[#532301] font-heading drop-shadow-sm" 
           >
             Timeline
           </h1>
