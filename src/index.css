@@ -22,3 +22,23 @@
   --font-heading: "Mokgech", serif;
   --font-accent: "CaptureIt", sans-serif;
 }
+
+body {
+  cursor: url('https://res.cloudinary.com/dooekcvv0/image/upload/v1770994858/c4g0mn7qhpc6h0qwszsk.png') 16 16, auto; 
+}
+
+
+
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
