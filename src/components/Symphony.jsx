@@ -1,8 +1,5 @@
-import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
-
 
 const images = [
   "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771004908/_MG_2586.JPG_at77iu.jpg",
@@ -13,17 +10,12 @@ const images = [
   "https://res.cloudinary.com/dxdzicbnt/image/upload/v1771005124/_MG_4179.JPG_op95vu.jpg",
 ];
 
-
-
-
-
 function Symphony() {
   return (
     <div
       className="relative w-full bg-cover bg-center bg-no-repeat text-white overflow-hidden"
       style={{ backgroundImage: "url('/Slice 4.png')" }}
     >
-
       {/* marquee*/}
       <div className="w-full overflow-hidden pt-4 md:pt-10">
         <motion.div
@@ -32,7 +24,7 @@ function Symphony() {
           transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
         >
           {[...images, ...images].map((img, i) => (
-            <div key={i} className="relative w-[110px] h-[160px] md:w-[200px] md:h-[290px]">
+            <div key={i} className="relative w-27.5 h-40 md:w-50 md:h-72.5">
               <img
                 src={img}
                 className="absolute top-[15%] left-[13%] w-[76%] h-[76%] object-cover z-10"
@@ -51,19 +43,17 @@ function Symphony() {
         <h1 className="font-heading text-white text-[9vw] md:text-[6.5vw] leading-none whitespace-nowrap text-center relative">
           Symp
           <span className="relative inline-block">
-            h
-            <span className="absolute left-[45%]">o</span>
+            h<span className="absolute left-[45%]">o</span>
           </span>
           ny of Experience
         </h1>
       </div>
 
       <div className="relative w-full md:flex md:items-end md:justify-between">
-
         {/* Sherlock image laptp */}
         <img
           src="https://res.cloudinary.com/dxdzicbnt/image/upload/v1771007229/Sherlock-Transparent-Image_1_2_xbgupl.png"
-          className="hidden md:block md:w-[420px] md:ml-6 md:mt-10"
+          className="hidden md:block md:w-105 md:ml-6 md:mt-10"
         />
 
         <motion.div
@@ -78,9 +68,8 @@ function Symphony() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-
           <div className="grid grid-cols-3 text-center gap-y-6 md:gap-14">
             <Stat number="7+" label="Years" />
             <Stat number="35+" label="Events" />
@@ -91,19 +80,18 @@ function Symphony() {
             <Stat number="7000+" label="Participants" />
             <Stat number="10000+" label="Footfall" />
           </div>
-
         </motion.div>
       </div>
 
       {/* sherlock mobile */}
       <img
         src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770990608/mijzmvlbhkzwlfrkudyc.png"
-        className="md:hidden absolute bottom-0 left-0 w-[80px] opacity-70"
+        className="md:hidden absolute bottom-0 left-0 w-20 opacity-70"
       />
 
       <img
         src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770990551/qdksamoucqvmpy04aart.png"
-        className="md:hidden absolute bottom-0 right-0 w-[80px] opacity-70"
+        className="md:hidden absolute bottom-0 right-0 w-20 opacity-70"
       />
     </div>
   );

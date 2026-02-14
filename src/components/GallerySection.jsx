@@ -20,11 +20,11 @@ function GallerySection() {
   return (
   <div
       // flex flex-col
-      className="w-full bg-cover bg-center bg-no-repeat flex flex-col items-center overflow-hidden"
+      className="w-full bg-cover h-screen bg-center bg-no-repeat flex flex-col items-center overflow-hidden"
       style={{
         backgroundImage: "url('/Slice 7.png')",
         aspectRatio: "1238 / 836",
-        minHeight: "600px"         //Prevents crushing on mobile
+        minHeight: "600px"
       }}
     >
 
