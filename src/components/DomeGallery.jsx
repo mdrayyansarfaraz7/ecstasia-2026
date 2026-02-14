@@ -1,11 +1,55 @@
-import { useEffect, useMemo, useRef, useCallback, useState } from 'react';
+import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
-import './DomeGallery.css';
+import '../DomeGallery.css';
 
 const DEFAULT_IMAGES = [
   {
-    src: '/img1.png',
-    alt: 'Abstract art'
+    src: '/gallery_img/webp/img1.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img2.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img3.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img4.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img5.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img6.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img7.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img8.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img9.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img10.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img11.webp',
+    alt: 'Modern sculpture'
+  },
+  {
+    src: '/gallery_img/webp/img12.webp',
+    alt: 'Modern sculpture'
   },
 ];
 
@@ -99,23 +143,23 @@ export default function DomeGallery({
   dragDampening = 2,
   openedImageWidth = '50rem',
   openedImageHeight = '50rem',
-  imageBorderRadius = '2rem',
+  imageBorderRadius = '1rem',
   openedImageBorderRadius = '2rem',
   grayscale = false
 }) {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  // useEffect(() => {
+  //   const checkMobile = () => setIsMobile(window.innerWidth < 768);
+  //   checkMobile();
+  //   window.addEventListener('resize', checkMobile);
+  //   return () => window.removeEventListener('resize', checkMobile);
+  // }, []);
 
 
-  const finalWidth = isMobile ? '90vw' : openedImageWidth;
-  const finalHeight = isMobile ? '50vh' : openedImageHeight;
-  const finalRadius = isMobile ? '1rem' : openedImageBorderRadius;
+  // const finalWidth = isMobile ? '90vw' : openedImageWidth;
+  // const finalHeight = isMobile ? '50vh' : openedImageHeight;
+  // const finalRadius = isMobile ? '1rem' : openedImageBorderRadius;
 
   const rootRef = useRef(null);
   const mainRef = useRef(null);

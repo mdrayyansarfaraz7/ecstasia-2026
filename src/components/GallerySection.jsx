@@ -20,23 +20,13 @@ function GallerySection() {
   return (
   <div
       // flex flex-col
-      className="w-full bg-cover bg-center bg-no-repeat flex flex-col items-center overflow-hidden"
+      className="w-full bg-cover h-[150vh] bg-center bg-no-repeat flex flex-col items-center overflow-hidden"
       style={{
         backgroundImage: "url('/Slice 7.png')",
         aspectRatio: "1238 / 836",
-        minHeight: "600px"         //Prevents crushing on mobile
+        minHeight: "600px"
       }}
     >
-
-      
-      <h1
-        className="relative z-10 text-[#532301] text-center 
-                   pt-10 md:pt-[8%] 
-                   mb-4 md:mb-8 
-                   text-[2rem] md:text-[6rem] lg:text-[10rem] leading-none font-heading"
-      >
-        Gallery
-      </h1>
 
      
       <div className="w-full flex-1 relative">
