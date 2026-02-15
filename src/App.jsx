@@ -60,7 +60,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/event-category/:cat" element={<EventCategory />} />
+      <Route path="/event-category" element={<EventCategory />} />
       <Route path="/event/:id" element={<EventDetails />} />
       <Route path="/fest-timeline" element={<FestTimeline />} />
 
