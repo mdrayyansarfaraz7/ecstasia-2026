@@ -33,7 +33,7 @@ function EcstasiaFamily() {
   useEffect(() => {
     const interval = setInterval(() => {
       setOrder((prev) => [prev[1], prev[2], prev[0]]);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

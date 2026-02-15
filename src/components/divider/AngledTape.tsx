@@ -52,10 +52,10 @@ function AngledTape() {
   return (
     <div
       ref={ref}
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] -rotate-6 py-2 bg-[#fcd63d] z-15 ] bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.85)_0px,rgba(0,0,0,0.85)_12px,transparent_12px,transparent_24px)]"
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] -rotate-6 py-2 bg-[#bfa024] z-15 ] bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.85)_0px,rgba(0,0,0,0.85)_12px,transparent_12px,transparent_24px)]"
       style={{ transformOrigin: "45%" }}
     >
-      <TapeRow text="The Enigma Beckons You" color="#fcd63d" />
+      <TapeRow text="The Enigma Beckons You" color="#bfa024" />
     </div>
   );
 }

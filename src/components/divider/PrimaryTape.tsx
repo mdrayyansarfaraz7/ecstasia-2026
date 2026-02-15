@@ -52,9 +52,9 @@ function PrimaryTape() {
   return (
     <div
       ref={ref}
-      className="relative mt-13 z-20 bg-[#fce534] py-2 overflow-hidden w-full bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.85)_0px,rgba(0,0,0,0.85)_12px,transparent_12px,transparent_24px)]"
+      className="relative mt-13 z-20 bg-[#d4be19] py-2 overflow-hidden w-full bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.85)_0px,rgba(0,0,0,0.85)_12px,transparent_12px,transparent_24px)]"
     >
-      <TapeRow text="Ecstasia 2026" color="#fce534" />
+      <TapeRow text="Ecstasia 2026" color="#d4be19" />
     </div>
   );
 }

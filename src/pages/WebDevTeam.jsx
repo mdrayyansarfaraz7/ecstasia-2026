@@ -15,6 +15,59 @@ function WebDevTeam() {
       position: "Web Dev Co-Lead",
       linkedinURL:
         "https://www.linkedin.com/in/md-rayyan-sarfaraz-79087428b/",
+    },
+        {
+      id: 1,
+      name: "Md Rayyan Sarfaraz",
+      year: "3rd Year",
+      isStudent:true,
+      fsId: "WD2026-2001",
+      course: "CSE (AI & ML) ",
+      imageUrl:
+        "https://res.cloudinary.com/dooekcvv0/image/upload/v1770918058/d4zgpnbamltec7ueucob.png",
+      position: "Web Dev Co-Lead",
+      linkedinURL:
+        "https://www.linkedin.com/in/md-rayyan-sarfaraz-79087428b/",
+    },
+        {
+      id: 1,
+      name: "Md Rayyan Sarfaraz",
+      year: "3rd Year",
+      isStudent:true,
+      fsId: "WD2026-2001",
+      course: "CSE (AI & ML) ",
+      imageUrl:
+        "https://res.cloudinary.com/dooekcvv0/image/upload/v1770918058/d4zgpnbamltec7ueucob.png",
+      position: "Web Dev Co-Lead",
+      linkedinURL:
+        "https://www.linkedin.com/in/md-rayyan-sarfaraz-79087428b/",
+    }
+    ,
+        {
+      id: 1,
+      name: "Md Rayyan Sarfaraz",
+      year: "3rd Year",
+      isStudent:true,
+      fsId: "WD2026-2001",
+      course: "CSE (AI & ML) ",
+      imageUrl:
+        "https://res.cloudinary.com/dooekcvv0/image/upload/v1770918058/d4zgpnbamltec7ueucob.png",
+      position: "Web Dev Co-Lead",
+      linkedinURL:
+        "https://www.linkedin.com/in/md-rayyan-sarfaraz-79087428b/",
+    },
+        {
+      id: 1,
+      name: "Md Rayyan Sarfaraz",
+      year: "3rd Year",
+      isStudent:true,
+      fsId: "WD2026-2001",
+      course: "CSE (AI & ML) ",
+      imageUrl:
+        "https://res.cloudinary.com/dooekcvv0/image/upload/v1770918058/d4zgpnbamltec7ueucob.png",
+      position: "Web Dev Co-Lead",
+      linkedinURL:
+        "https://www.linkedin.com/in/md-rayyan-sarfaraz-79087428b/",
     }
   ];
 

@@ -24,12 +24,8 @@
 }
 
 body {
-  cursor: url('https://res.cloudinary.com/dooekcvv0/image/upload/v1770994858/c4g0mn7qhpc6h0qwszsk.png') 16 16, auto; 
+  cursor: url('https://res.cloudinary.com/dooekcvv0/image/upload/w_96,h_96,c_scale/v1771079558/gzhhakkwfo4slawjmpyq.png') 64 64, auto;
 }
-
-
-
-
 
 @keyframes fadeUp {
   from {
@@ -42,3 +38,7 @@ body {
   }
 }
 
+@keyframes scan {
+  0% { transform: translateY(-120%); }
+  100% { transform: translateY(220%); }
+}
