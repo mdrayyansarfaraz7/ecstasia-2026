@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 function PreviousPartners() {
   return (
     <div className="w-full min-h-[40vh] sm:min-h-[50vh] bg-[#20110B] flex flex-col justify-center">
-      <h1 className="text-white font-heading text-center py-8 sm:py-12 text-3xl sm:text-5xl lg:text-7xl">
+      <h1 className="text-white font-heading text-center py-8 sm:py-12 text-5xl sm:text-7xl lg:text-8xl">
         Our Previous Partners
       </h1>
 

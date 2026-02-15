@@ -31,7 +31,7 @@ function EventCategory() {
           venue: "Main Auditorium",
           type: "Team",
           teamSize: "4–8",
-          fees: 0,
+          fees: '250-Solo ',
           poster: "#",
           desc: "A Gen-Z detective comedy drama packed with mystery, humor and theatrical twists presented as a competitive stage performance.",
           regLink: "#",

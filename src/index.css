@@ -21,10 +21,14 @@
   --font-body: "Karma", serif;
   --font-heading: "Mokgech", serif;
   --font-accent: "CaptureIt", sans-serif;
+  --primary: #B46A33;
 }
 
 body {
-  cursor: url('https://res.cloudinary.com/dooekcvv0/image/upload/w_96,h_96,c_scale/v1771079558/gzhhakkwfo4slawjmpyq.png') 64 64, auto;
+  cursor:
+    url("https://res.cloudinary.com/dooekcvv0/image/upload/w_96,h_96,c_scale/v1771079558/gzhhakkwfo4slawjmpyq.png")
+      48 48,
+    auto;
 }
 
 @keyframes fadeUp {
@@ -38,7 +42,50 @@ body {
   }
 }
 
-@keyframes scan {
-  0% { transform: translateY(-120%); }
-  100% { transform: translateY(220%); }
+@keyframes filescan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  50% {
+    width: 39ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+@layer base {
+  *,
+  html {
+    scroll-behavior: smooth;
+  }
+
+  *::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #363431;
+  }
+
+  /* Thumb */
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 10px;
+  }
 }
