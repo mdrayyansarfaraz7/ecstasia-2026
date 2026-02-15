@@ -61,7 +61,7 @@ function Timer() {
 
   return (
     <div
-      className="w-full h-screen bg-cover bg-center flex flex-col justify-center gap-8 px-4"
+      className="w-full min-h-[75vh] md:min-h-screen bg-cover bg-center flex flex-col justify-center gap-8 px-4"
       style={{
         backgroundImage: "url('/Slice 2.png')",
         backgroundColor: "#FDECE2",
@@ -72,7 +72,6 @@ function Timer() {
           show ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0"
         }`}
       >
-
         <div className="flex flex-col items-center gap-8 md:hidden">
           <img
             src="https://res.cloudinary.com/dooekcvv0/image/upload/v1770660295/lbei505cdeepiauuntar.png"
@@ -90,7 +89,6 @@ function Timer() {
 
         <div className="hidden md:block">
           <div className="lg:flex lg:items-center lg:justify-center lg:gap-16">
-
             <div className="grid grid-cols-3 items-center gap-4 lg:hidden">
               <div className="flex flex-col gap-6 items-center">
                 <Box value={timeLeft.days} label="days" />
@@ -125,10 +123,8 @@ function Timer() {
                 <Box value={timeLeft.seconds} label="seconds" />
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
 
       <p

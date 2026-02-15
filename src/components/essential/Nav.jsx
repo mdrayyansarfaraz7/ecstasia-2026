@@ -42,7 +42,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <div className="z-200 fixed top-0 right-0 left-0 flex items-center justify-between m-6 px-4 h-22 rounded-3xl bg-[#c1c6cf29] backdrop-blur-2xl">
+    <div className="z-200 fixed top-0 right-0 left-0 flex items-center justify-between m-3 sm:m-6 px-4 h-22 rounded-3xl bg-[#c1c6cf29] backdrop-blur-2xl">
       <div className="flex items-center flex-row">
         <img src="/uem.svg" alt="UEMK" className="h-11 md:h-17 lg:h-21" />
         <img
@@ -93,42 +93,42 @@ function NavLinks({ setOpen }) {
     shadow-lg z-50 backdrop-blur-xl`
       }`}
     >
-      <Link
-        to={"/"}
+      <a
+        href={"#hero"}
         onClick={() => {
           if (isMobile) setOpen(false);
         }}
         className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
       >
         Home
-      </Link>
-      <Link
-        to={"/fest-timeline"}
-        onClick={() => {
-          if (isMobile) setOpen(false);
-        }}
-        className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
-      >
-        Timeline
-      </Link>
-      <Link
-        to={"/"}
+      </a>
+        <a
+          href={"#timeline"}
+          onClick={() => {
+            if (isMobile) setOpen(false);
+          }}
+          className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
+        >
+          Timeline
+        </a>
+      <a
+        href={"#excitingEvent"}
         onClick={() => {
           if (isMobile) setOpen(false);
         }}
         className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
       >
         Exciting Event
-      </Link>
-      <Link
-        to={"/"}
+      </a>
+      <a
+        href={"#ecstasiaFamily"}
         onClick={() => {
           if (isMobile) setOpen(false);
         }}
         className="drop-shadow-[2px_2px_4px_rgba(50,50,50,0.5)]"
       >
         Ecstasia Family
-      </Link>
+      </a>
     </nav>
   );
 }

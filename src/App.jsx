@@ -1,51 +1,57 @@
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Hero from "./components/Hero";
-import Timer from "./components/Timer";
-import AboutUs from "./components/AboutUs";
-import Symphony from "./components/Symphony";
-import Timeline from "./components/Timeline";
-import ExcitingEvents from "./components/ExcitingEvents";
-import GallerySection from "./components/GallerySection";
-import EcstasiaFamily from "./components/EcstasiaFamily";
-import PreviousPartners from "./components/PreviousPartners";
-import Bottom from "./components/Bottom";
-import EventCategory from "./pages/EventCategory";
-import FestTimeline from "./pages/FestTimeline";
-import NotFound from "./pages/NotFound";
-import EventDetails from "./pages/EventDetails";
-import FacultyHeads from "./pages/FacultyHeads";
-import FestAdvisors from "./pages/FestAdvisors";
-import CoreTeam from "./pages/CoreTeam";
-import WebDevTeam from "./pages/WebDevTeam";
-import GraphicsTeam from "./pages/GraphicsTeam";
-import MarketingTeam from "./pages/MarketingTeam";
-import ContentTeam from "./pages/ContentTeam";
-import PRTeam from "./pages/PRTeam";
-import LogesticsTeam from "./pages/LogesticsTeam";
-import Footer from "./components/essential/Footer";
 import Divider from "./components/divider/Divider";
 import DividerSingle from "./components/divider/DividerSingle";
 import Nav from "./components/essential/Nav";
+import SecFallback from "./components/SecFallback";
+
+const Hero = lazy(() => import("./components/Hero"));
+const Timer = lazy(() => import("./components/Timer"));
+const AboutUs = lazy(() => import("./components/AboutUs"));
+const Symphony = lazy(() => import("./components/Symphony"));
+const Timeline = lazy(() => import("./components/Timeline"));
+const ExcitingEvents = lazy(() => import("./components/ExcitingEvents"));
+const GallerySection = lazy(() => import("./components/GallerySection"));
+const EcstasiaFamily = lazy(() => import("./components/EcstasiaFamily"));
+const PreviousPartners = lazy(() => import("./components/PreviousPartners"));
+const Bottom = lazy(() => import("./components/Bottom"));
+const Footer = lazy(() => import("./components/essential/Footer"));
+const EventCategory = lazy(() => import("./pages/EventCategory"));
+const FestTimeline = lazy(() => import("./pages/FestTimeline"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const EventDetails = lazy(() => import("./pages/EventDetails"));
+const FacultyHeads = lazy(() => import("./pages/FacultyHeads"));
+const FestAdvisors = lazy(() => import("./pages/FestAdvisors"));
+const CoreTeam = lazy(() => import("./pages/CoreTeam"));
+const WebDevTeam = lazy(() => import("./pages/WebDevTeam"));
+const GraphicsTeam = lazy(() => import("./pages/GraphicsTeam"));
+const MarketingTeam = lazy(() => import("./pages/MarketingTeam"));
+const ContentTeam = lazy(() => import("./pages/ContentTeam"));
+const PRTeam = lazy(() => import("./pages/PRTeam"));
+const LogesticsTeam = lazy(() => import("./pages/LogesticsTeam"));
 
 function Home() {
   return (
     <>
       <Nav />
-      <Hero />
-      <Divider />
-      <Timer/>
-      <AboutUs />
-      <Symphony />
-      <ExcitingEvents />
-      <DividerSingle />
-      <Timeline />
-      <GallerySection />
-      <DividerSingle />
-      <EcstasiaFamily />
-      <DividerSingle />
-      <PreviousPartners />
-      <Bottom />
-      <Footer/>
+      <Suspense fallback={<SecFallback />}>
+        <Hero />
+        <Divider />
+        <Timer />
+        <AboutUs />
+        <Symphony />
+        <DividerSingle />
+        <ExcitingEvents />
+        <DividerSingle />
+        <Timeline />
+        <GallerySection />
+        <DividerSingle />
+        <EcstasiaFamily />
+        <DividerSingle />
+        <PreviousPartners />
+        <Bottom />
+        <Footer />
+      </Suspense>
     </>
   );
 }
