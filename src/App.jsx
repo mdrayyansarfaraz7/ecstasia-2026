@@ -1,7 +1,8 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import CentralRegisteration from "./pages/CentralRegisteration";
 import NotFound from "./pages/NotFound";
+import SecFallback from "./components/SecFallback";
 
 const Home = lazy(() => import("./pages/Home"));
 const EventCategory = lazy(() => import("./pages/EventCategory"));
@@ -65,8 +66,8 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <>
+    <Suspense fallback={<SecFallback />}>
       <AppRoutes />
-    </>
+    </Suspense>
   );
 }

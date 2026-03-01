@@ -18,28 +18,26 @@ const Footer = lazy(() => import("../components/essential/Footer"));
 
 const Home = () => {
   return (
-    <>
-      <Suspense fallback={<SecFallback />}>
-        <Nav />
-        <Hero />
-        <Divider />
-        <Timer />
-        <AboutUs />
-        <Symphony />
-        <DividerSingle />
-        <ExcitingEvents />
-        <DividerSingle />
-        <Timeline />
-        <DividerSingle />
-        <GallerySection />
-        <DividerSingle />
-        <EcstasiaFamily />
-        <DividerSingle />
-        <PreviousPartners />
-        <Bottom />
-        <Footer />
-      </Suspense>
-    </>
+    <Suspense fallback={<SecFallback />}>
+      <Nav />
+      <Hero />
+      <Divider />
+      <Timer />
+      <AboutUs />
+      <Symphony />
+      <DividerSingle />
+      <ExcitingEvents />
+      <DividerSingle />
+      <Timeline />
+      <DividerSingle />
+      <GallerySection />
+      <DividerSingle />
+      <EcstasiaFamily />
+      <DividerSingle />
+      <PreviousPartners />
+      <Bottom />
+      <Footer />
+    </Suspense>
   );
 };
 
