@@ -365,7 +365,7 @@ function EventCategory() {
           poster:
             "https://res.cloudinary.com/dooekcvv0/image/upload/v1772085100/otgqfc5kl4bmwp7cugw1.png",
           desc:
-            "Woven Tales is Ecstasia '26's short film competition, celebrating the magic of storytelling through cinema. Participants are invited to write, direct, and produce an original short film that captivates, challenges, and moves its audience. With no boundaries on genre and full creative freedom, Woven Tales is the platform where emerging filmmakers bring bold ideas to life. From the first frame to the final cut, this is your chance to prove that the most powerful stories are the ones you create yourself.",
+            "Chase the Hue at Ecstasia '26 is a vibrant, fast-paced colour hunt competition that challenges participants to find, frame, and celebrate colour in the world around them. Armed with a camera and a sharp eye, competitors must track down specific hues and capture them in creative, visually stunning shots. It's part scavenger hunt, part art exhibition—and entirely exhilarating. Whether you're a seasoned photographer or a curious explorer, Chase the Hue turns the everyday world into a living, breathing canvas. Join the hunt and let colour tell your story.",
           regLink: "https://forms.gle/iyRnYXo5sjXHuBCw6",
         },
       ]
@@ -512,7 +512,7 @@ function EventCategory() {
           day: "Day 1",
           type: "Team",
           teamSize: "5-10",
-          fees: "150/head",
+          fees: "750/Team",
           rules:"https://res.cloudinary.com/dooekcvv0/image/upload/v1772210015/j8vdxf7wt8xpbighppb1.png",
           poster:
             "https://res.cloudinary.com/dooekcvv0/image/upload/v1771678295/yucvryxz9ustgzkzvb3v.png",
@@ -762,12 +762,13 @@ function EventCategory() {
           type: "Solo",
           teamSize: "",
           fees: "100",
-          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772088772/sfapaua2qvtrdvftuhq7.png",
+          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772356068/t4o5onhvzedksavzpqi2.png",
           poster:
-            "https://res.cloudinary.com/dooekcvv0/image/upload/v1772088693/twpucbgmvgiv6zsnjxal.png",
+            "https://res.cloudinary.com/dooekcvv0/image/upload/v1772373871/mcdxwomkpxxzzivmmj2p.png",
           desc:
-            "Sharpen your mind and step into the ultimate intellect showdown at Battle of Wits, Ecstasia 26’s high-energy Question Battle event. Participants will face off in thrilling rounds of rapid-fire questions, logical challenges, and knowledge duels that test awareness, quick thinking, and mental agility. Every answer counts, every second matters, and only the sharpest minds will rise to the top. Get ready to think fast, respond smarter, and claim the crown of wisdom.",
-          regLink: "https://docs.google.com/forms/d/e/1FAIpQLSfv-wdShRzmlW2vaUg4b-Wo4PH3RL16qHQctYHyBagWcXK09A/viewform?usp=dialog",
+            "Step into the spotlight at Battle of Wits, Ecstasia ’26’s fast-paced verbal duel where two participants face off in a battle of questions — and questions only. In this improvisational showdown, players must think quickly, respond instantly, and keep the flow alive without slipping into statements or hesitation. It’s a test of sharp thinking, humor, and presence of mind, where one wrong move can cost the round. Quick wit wins — do you have what it takes?",
+          regLink: "https://forms.gle/TQ1VoMWNAw3vMSA19",
+          
         },
         {
           id: 5,
