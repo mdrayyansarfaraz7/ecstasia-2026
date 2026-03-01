@@ -148,7 +148,7 @@ function ExcitingEvents() {
       id="excitingEvent"
       ref={ref}
       className="relative w-full min-h-[50vh] flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-24 py-16 bg-cover bg-center overflow-hidden scroll-mt-19"
-      style={{ backgroundImage: "url('/Slice 5.png')" }}
+      style={{ backgroundImage: "url('/Slice 5.webp')" }}
     >
       {/* TEXT SECTION */}
       <div className="relative z-30 max-w-xl text-white text-center lg:text-left mb-4 lg:mb-0">

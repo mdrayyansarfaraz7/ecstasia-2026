@@ -8,7 +8,7 @@ function Timeline() {
       id="timeline"
       className="w-full bg-cover bg-center bg-no-repeat overflow-x-hidden min-h-screen lg:min-h-0 lg:aspect-1238/836 relative pb-10 lg:pb-0"
       style={{
-        backgroundImage: "url('/Slice%206.png')",
+        backgroundImage: "url('/Slice 6.webp')",
         backgroundColor: "#dccfb8",
       }}
     >
@@ -110,20 +110,3 @@ function Timeline() {
 }
 
 export default Timeline;
-
-// import React from 'react'
-
-// function Timeline() {
-//   return (
-//     <div
-//       className="w-full bg-cover bg-center bg-no-repeat"
-//       style={{
-//         backgroundImage: "url('/Slice 6.png')",
-//         aspectRatio: "1238 / 836",
-//       }}
-//     >
-//     </div>
-//   )
-// }
-
-// export default Timeline

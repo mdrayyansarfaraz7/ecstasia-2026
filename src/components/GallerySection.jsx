@@ -26,7 +26,7 @@ function GallerySection() {
     <div
       className="cursor-pointer w-full bg-cover h-[70vh] md:h-screen bg-center bg-no-repeat flex flex-col items-center overflow-hidden relative"
       style={{
-        backgroundImage: "url('/Slice 7.png')",
+        backgroundImage: "url('/Slice 7.webp')",
         aspectRatio: "1238 / 836",
         minHeight: "600px",
       }}

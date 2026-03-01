@@ -254,7 +254,7 @@ function VideoEditingTeam() {
       style={{
         backgroundImage: `
           linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
-          url('/wood.png')
+          url('/wood.webp')
         `,
         backgroundSize: "cover",
         backgroundPosition: "center",

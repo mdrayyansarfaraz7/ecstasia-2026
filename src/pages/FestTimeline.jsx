@@ -5,7 +5,7 @@ function FestTimeline() {
     <div className="relative min-h-screen w-full flex flex-col items-center justify-center text-center text-black">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/timeline.png')" }}
+        style={{ backgroundImage: "url('/timeline.webp')" }}
       />
 
 

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function EventCategory() {
   const categories = [
     {
-      name: "Drama", image: "/DRAMA.png", events: [
+      name: "Drama", image: "/DRAMA.webp", events: [
         {
           id: 1,
           title: "Swabalambi",
@@ -79,7 +79,7 @@ function EventCategory() {
       ],
     },
     {
-      name: "Art", image: "/ART.png", events: [
+      name: "Art", image: "/ART.webp", events: [
         {
           id: 1,
           title: "Tee Splash",
@@ -167,7 +167,7 @@ function EventCategory() {
       ]
     },
     {
-      name: "Sports", image: "/SPORTS.png", events: [
+      name: "Sports", image: "/SPORTS.webp", events: [
         {
           id: 1,
           title: "Blaze Bounce",
@@ -283,7 +283,7 @@ function EventCategory() {
       ]
     },
     {
-      name: "Photography", image: "/PHOTOGRAPHY.png", events: [
+      name: "Photography", image: "/PHOTOGRAPHY.webp", events: [
         {
           id: 1,
           title: "Own the Frame",
@@ -371,7 +371,7 @@ function EventCategory() {
       ]
     },
     {
-      name: "App Creation", image: "/APP.png", events: [
+      name: "App Creation", image: "/APP.webp", events: [
         {
           id: 1,
           title: "Gamify",
@@ -445,7 +445,7 @@ function EventCategory() {
       ]
     },
     {
-      name: "Business", image: "/BUSINESS.png", events: [
+      name: "Business", image: "/BUSINESS.webp", events: [
         {
           id: 1,
           title: "Pitch Please!",
@@ -505,7 +505,7 @@ function EventCategory() {
       ]
     },
     {
-      name: "Dance", image: "/DANCE.png", events: [
+      name: "Dance", image: "/DANCE.webp", events: [
         {
           id: 1,
           title: "Rhythmic Remix",
@@ -563,7 +563,7 @@ function EventCategory() {
         },]
     },
     {
-      name: "Music", image: "/MUSIC.png", events: [
+      name: "Music", image: "/MUSIC.webp", events: [
         {
           id: 1,
           title: "Fusion Gala",
@@ -638,7 +638,7 @@ function EventCategory() {
       ]
     },
     {
-      name: "Literary", image: "/LITERARY.png", events: [
+      name: "Literary", image: "/LITERARY.webp", events: [
         {
           id: 1,
           title: "Knownsense",
@@ -712,7 +712,7 @@ function EventCategory() {
       ]
     },
     {
-      name: "Informals", image: "/GENERAL.png", events: [
+      name: "Informals", image: "/GENERAL.webp", events: [
         {
           id: 1,
           title: "Fame in a Flash",
@@ -940,8 +940,8 @@ function EventCategory() {
                   {/* Portrait Container - Forced 3:4 Aspect Ratio */}
                   <div
                     className="
-              relative aspect-[3/4] w-full 
-              border-[16px] border-white 
+              relative aspect-3/4 w-full 
+              border-16 border-white 
               shadow-[inset_0_0_40px_rgba(0,0,0,0.2),10px_10px_20px_rgba(0,0,0,0.15)]
               overflow-hidden bg-[#d9c5a3]
             "
@@ -986,7 +986,7 @@ function EventCategory() {
                 </header>
 
                 <div className="relative">
-                  <p className="font-body text-base leading-[1.6] text-[#2b1e16] text-justify mb-8 hyphens-auto break-words">
+                  <p className="font-body text-base leading-[1.6] text-[#2b1e16] text-justify mb-8 hyphens-auto wrap-break-word">
                     <span
                       className="
                 float-left text-5xl sm:text-7xl 

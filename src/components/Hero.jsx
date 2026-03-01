@@ -12,7 +12,7 @@ function Hero() {
       id="hero"
       className="w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
       style={{
-        backgroundImage: "url('/Slice 1.png')",
+        backgroundImage: "url('/Slice 1.webp')",
         aspectRatio: "1238 / 836",
       }}
     >

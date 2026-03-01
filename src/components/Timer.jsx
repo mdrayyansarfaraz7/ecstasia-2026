@@ -64,7 +64,7 @@ function Timer() {
     <div
       className="w-full min-h-[55vh] bg-cover bg-center flex flex-col items-center justify-center gap-8 px-4 py-9"
       style={{
-        backgroundImage: "url('/Slice 2.png')",
+        backgroundImage: "url('/Slice 2.webp')",
         backgroundColor: "#FDECE2",
       }}
     >

@@ -42,7 +42,7 @@ function Symphony() {
   return (
     <div
       className="relative w-full bg-cover bg-center bg-no-repeat text-white overflow-hidden"
-      style={{ backgroundImage: "url('/Slice 4.png')" }}
+      style={{ backgroundImage: "url('/Slice 4.webp')" }}
     >
       <div className="w-full overflow-hidden">
         <Marquee speed={60} pauseOnHover gradient={false}>

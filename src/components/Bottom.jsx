@@ -23,7 +23,7 @@ function Bottom() {
     <div
       ref={sectionRef}
       className="w-full h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center px-4 sm:px-10"
-      style={{ backgroundImage: "url('/Slice 11.png')" }}
+      style={{ backgroundImage: "url('/Slice 11.webp')" }}
     >
       <div className="text-center">
         <h1

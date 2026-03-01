@@ -17,7 +17,7 @@ function AboutUs() {
       ref={ref}
       className="w-full min-h-[50vh] md:min-h-[65vh] bg-cover bg-center flex items-center justify-center px-6 py-12 bg-[#FDECE2]"
       style={{
-        backgroundImage: "url('/Slice 3.png')",
+        backgroundImage: "url('/Slice 3.webp')",
       }}
     >
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">

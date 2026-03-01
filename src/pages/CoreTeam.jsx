@@ -54,7 +54,7 @@ function CoreTeam() {
       style={{
         backgroundImage: `
           linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
-          url('/wood.png')
+          url('/wood.webp')
         `,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -87,7 +87,7 @@ function CoreTeam() {
                 className={`
           relative
           w-64 md:w-72 lg:w-80
-          aspect-[3/4]
+          aspect-3/4
           transition-all duration-300
           hover:-translate-y-2
         `}
@@ -95,7 +95,7 @@ function CoreTeam() {
 
                 {/* Folder Image */}
                 <img
-                  src="/file.png"
+                  src="/file.webp"
                   alt={team.teamName}
                   className="
             w-full h-full object-contain
@@ -109,7 +109,7 @@ function CoreTeam() {
                 {/* Content Overlay */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
 
-                  <div className="-rotate-[10deg] text-center">
+                  <div className="-rotate-10 text-center">
 
 
                     {/* Team Name */}

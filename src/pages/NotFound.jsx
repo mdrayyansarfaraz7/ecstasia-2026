@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <div
       className="min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-center"
-      style={{ backgroundImage: "url('/notfound.png')" }}
+      style={{ backgroundImage: "url('/notfound.webp')" }}
     >
 
       <div className="relative z-10">

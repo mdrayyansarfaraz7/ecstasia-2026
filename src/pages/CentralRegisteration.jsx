@@ -5,7 +5,7 @@ function CentralRegisteration() {
     <div
       className="
         min-h-screen
-        bg-[url('/GENERAL.png')]
+        bg-[url('/GENERAL.webp')]
         bg-cover bg-center
         flex items-center justify-center
         px-4
