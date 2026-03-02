@@ -142,7 +142,7 @@ function EventCategory() {
           day: "Day ",
           type: "Solo",
           teamSize: "",
-          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1771684257/lhinpg9ytdsklu3oltnl.png",
+          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772460495/diw1fjoyjixk23btixd2.png",
           fees: "100",
           poster:
             "https://res.cloudinary.com/dooekcvv0/image/upload/v1771687715/ptq3ylbbfvzpjtm8b3ss.png",
@@ -360,7 +360,7 @@ function EventCategory() {
           day: "Day 1",
           type: "Solo",
           teamSize: "",
-          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772085139/oharndx2jjqc5enklcjj.png",
+          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772460630/il5zyx6wtik83yrg9c2w.png",
           fees: "Free",
           poster:
             "https://res.cloudinary.com/dooekcvv0/image/upload/v1772085100/otgqfc5kl4bmwp7cugw1.png",
@@ -453,7 +453,7 @@ function EventCategory() {
           type: "Duet",
           teamSize: "",
           fees: "150",
-          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772026626/rccuutl1aks2dxxq6aeb.png",
+          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772460308/uwlo9jvmedb8cwy26cej.png",
           poster:
             "https://res.cloudinary.com/dooekcvv0/image/upload/v1772026695/gevspvxlrso8sl8blrnj.png",
           desc:
