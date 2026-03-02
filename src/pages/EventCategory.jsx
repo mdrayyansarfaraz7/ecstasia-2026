@@ -245,7 +245,7 @@ function EventCategory() {
           type: "Duet",
           teamSize: "",
           rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1771953072/zpvln2pmgrk6r6df3rnx.png",
-          fees: "150",
+          fees: "100/head",
           poster:
             "https://res.cloudinary.com/dooekcvv0/image/upload/v1771683609/ic6qedvhpbxwqgmfemre.png",
           desc:
