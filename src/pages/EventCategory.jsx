@@ -242,7 +242,7 @@ function EventCategory() {
           id: 6,
           title: "Cue the Queen",
           day: "Day 1",
-          type: "Solo",
+          type: "Duet",
           teamSize: "",
           rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1771953072/zpvln2pmgrk6r6df3rnx.png",
           fees: "150",
@@ -513,7 +513,7 @@ function EventCategory() {
           type: "Team",
           teamSize: "5-10",
           fees: "750/Team",
-          rules:"https://res.cloudinary.com/dooekcvv0/image/upload/v1772210015/j8vdxf7wt8xpbighppb1.png",
+          rules:"https://res.cloudinary.com/dooekcvv0/image/upload/v1772442359/dah4bfvjss3x10iefven.png",
           poster:
             "https://res.cloudinary.com/dooekcvv0/image/upload/v1771678295/yucvryxz9ustgzkzvb3v.png",
           desc:
