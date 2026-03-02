@@ -162,7 +162,7 @@ function PRTeam() {
       year: "1st Year",
       course: "CSE (AI)",
       isStudent: true,
-      imageUrl: "https://res.cloudinary.com/dooekcvv0/image/upload/v1771153749/yzhekiwxny7jlejjv3mf.jpg",
+      imageUrl: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772443886/iausbxwspim8mame3kmn.jpg",
       position: "Member",
       linkedinURL: "https://www.instagram.com/ridhhii_.15?igsh=MnRsZHhienhhcGMy"
     },
