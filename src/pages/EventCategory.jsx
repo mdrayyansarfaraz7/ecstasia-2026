@@ -12,7 +12,7 @@ function EventCategory() {
           day: "Day 1",
           type: "Solo",
           teamSize: "",
-          fees: "150",
+          fees: "100",
           rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1771947122/g0ze965expo364c8jzzp.png",
           poster:
             "https://res.cloudinary.com/dooekcvv0/image/upload/v1771953374/xt84ckz05irmps2vfzh9.png",
@@ -353,20 +353,6 @@ function EventCategory() {
           desc:
             "Woven Tales is Ecstasia '26's short film competition, celebrating the magic of storytelling through cinema. Participants are invited to write, direct, and produce an original short film that captivates, challenges, and moves its audience. With no boundaries on genre and full creative freedom, Woven Tales is the platform where emerging filmmakers bring bold ideas to life. From the first frame to the final cut, this is your chance to prove that the most powerful stories are the ones you create yourself.",
           regLink: "https://forms.gle/QrKm6m2q6XrfUDpp9",
-        },
-        {
-          id: 6,
-          title: "Chase the Hue",
-          day: "Day 1",
-          type: "Solo",
-          teamSize: "",
-          rules: "https://res.cloudinary.com/dooekcvv0/image/upload/v1772460630/il5zyx6wtik83yrg9c2w.png",
-          fees: "Free",
-          poster:
-            "https://res.cloudinary.com/dooekcvv0/image/upload/v1772085100/otgqfc5kl4bmwp7cugw1.png",
-          desc:
-            "Chase the Hue at Ecstasia '26 is a vibrant, fast-paced colour hunt competition that challenges participants to find, frame, and celebrate colour in the world around them. Armed with a camera and a sharp eye, competitors must track down specific hues and capture them in creative, visually stunning shots. It's part scavenger hunt, part art exhibition—and entirely exhilarating. Whether you're a seasoned photographer or a curious explorer, Chase the Hue turns the everyday world into a living, breathing canvas. Join the hunt and let colour tell your story.",
-          regLink: "https://forms.gle/iyRnYXo5sjXHuBCw6",
         },
       ]
     },
